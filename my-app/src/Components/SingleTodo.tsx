@@ -8,12 +8,13 @@ import TodoList from './TodoList'
 
 
 type Props = {
+    index: number;
     todo: Todo;
     todos: Todo[];
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
-const SingleTodo = ({todo,todos,setTodos}:Props) => {
+const SingleTodo = ({index,todo,todos,setTodos}:Props) => {
 
     // first state of edit function - keep track if edit mode is on or not
     const [edit,setEdit] = useState<boolean>(false)
